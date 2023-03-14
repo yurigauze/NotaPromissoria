@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="google-site-verification" content="O7_jkPGTUauDp0GVGyvA70v7BQjCpHjkVQnGJY-f1Pc">
+    <title>Nota Promissória</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Nota Promissória">
+    <meta name="keywords" content="Nota promissoria">
+    <meta name="author" content="Yuri Gauze">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+	<div class="barra">
+	<img src="scr/logo.png" alt="LOGO" class="imagem"> 
+		<h1 class="lead-title">Nota Promissória</h1>
+	</div>
+	
+    <div class="container">
+        <div class="form">
+            <form>
+
+                <div class="box">
+                    <label for="valor">Valor:</label>
+                    <input type="text" size="12" id="valor" name="valor" onblur="validarCampoVazio(this)"
+                        onkeyup="mascaraMoeda(this, event)">
+
+                    <label for="data">Data de vencimento:</label>
+                    <input type="date" id="data" name="data" onblur="validarCampoVazio(this)">
+
+                </div>
+
+
+                <div>
+                    <div class="box">
+                        <h2> Dados do devedor</h2>
+                        <label for="nome">Nome do devedor:</label>
+                        <input type="text" id="nomeDevedor" name="nomeDevedor" onblur="validarCampoVazio(this)"><br><br>
+						<div id="teste"></div>
+                    </div>
+                    <div class="document">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpfdevedor" name="cpfdevedor" onblur="validarCPF(this.value); validarCampoVazio(this)">
+                        <div id="cpf-feedback"></div>
+                    </div>
+                    <div class="document">
+                        <label for="cnpj">CNPJ:</label>
+                        <input type="text" id="cnpjdevedor" name="cnpjdevedor" onblur="validarCNPJ(this.value); validarCampoVazio(this)">
+                        <div id="cnpj-feedback"></div>
+                    </div>
+
+                    <div class="box">
+                        <label for="endereco">Endereço completo do devedor:</label>
+                        <input type="text" id="enderecoDevedor" name="endereco" onblur="validarCampoVazio(this)">
+                    </div>
+
+                </div>
+
+                <div>
+                    <div class="box">
+                        <h2> Dados do credor</h2>
+                        <label for="nome">Nome do credor:</label>
+                        <input type="text" id="nomeCredor" name="nome" onblur="validarCampoVazio(this)"><br><br>
+                    </div>
+                    <div class="document">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpfcredor" name="cpfcredor" onblur="validarCPF(this.value); validarCampoVazio(this)">
+                        <div id="cpf-feedback"></div>
+                    </div>
+                    <div class="document">
+                        <label for="cnpj">CNPJ:</label>
+                        <input type="text" id="cnpjcredor" name="cnpjcredor" onblur="validarCNPJ(this.value); validarCampoVazio(this)">
+                        <div id="cnpj-feedback"></div>
+                    </div>
+                </div>
+
+                <div class="formulario" style="display: none;" id="dadosFormulario">
+                      <h1>Nota promissoria</h1>  
+                    <div>Eu <spam id="NomeD"></spam>, CPF/CNPJ <spam id="CPFD"></spam><spam id="CNPJD"></spam>, <br> Residente no endereço: <spam id="enderecoD"></spam> <br> prometo pagar a quantia de R$ <spam id="valores"></spam> (<spam id="escritas"></spam>) até a data de <spam id="datas"></spam> para <spam id="nomeC"></spam> CPF/CNPJ: <spam id="CPFC"></spam><spam id="CNPJC"></spam>
+                    <br><br><br><br><br>
+
+                    Assinatura: ________________________________________________
+                    </div>
+
+                </div>
+
+
+                <button id="botaoImprimir" onclick=" gerarNotaPromissoria(); printDiv('dadosFormulario')" >Imprimir</button>
+
+        </div>
+
+
+
+        </form>
+    </div>
+    </div>
+
+    <script type="text/javascript" src="index.js">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0efef;
+    margin: 0px;
+    background: #cacbcc;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box{
+    width: 45%;
+    margin: 5px;
+
+    
+ }
+ 
+ .imagem {
+	 margin-top: 35px;
+	 width
+	 	 text-align: center;
+  width: 15%;
+  height: 15%;
+}
+ 
+ .barra{
+	 width: 400px;
+    margin: auto;
+	 text-align: center;
+	 display: flex;
+    flex-wrap: wrap;
+    
+ }
+
+ .container .form .box .box.box1{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.form {
+    box-sizing: border-box;
+    width: 700px;
+    margin: 50px auto;
+    border: 1px solid #dfdddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #0c0c0c27;
+    background-color: #fff;
+}
+
+ @media screen and (max-width: 790px) {
+    .box{
+        width: 100%;
+    } 
+    .form{
+        width: 100%;
+    }
+ }
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+
+
+label {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+input[type="text"] {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #dfdddd;
+    margin-bottom: 10px;
+    padding: 5px;
+    display: inline-block;
+    
+}
+input[type="date"] {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #dfdddd;
+    margin-bottom: 10px;
+    padding: 5px;
+    display: inline-block;
+    
+}
+
+button {
+    width: 100%;
+    background-color: #5cb8a9;
+    border: none;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#inline {
+    display: inline;
+}
+
+.document{
+    display: inline-block;
+    width: 45%;
+    margin: 5px;
+}
